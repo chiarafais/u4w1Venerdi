@@ -1,13 +1,16 @@
 package entities;
 
+import enums.TypeElement;
 import interfaces.Brightness;
 import interfaces.Play;
+
+import java.util.Timer;
 
 public class Video extends MultimedialElement implements Play, Brightness {
 
 
-    public Video(String title, int length, int volume, int brightness) {
-        super(title, length, volume, brightness);
+    public Video(String title, int length, int volume, int brightness, TypeElement typeElement) {
+        super(title, length, volume, brightness, typeElement );
     }
 
 
