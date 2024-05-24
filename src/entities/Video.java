@@ -14,28 +14,45 @@ public class Video extends MultimedialElement implements Play, Brightness {
     }
 
 
-    @Override
-    public void play() {
 
-    }
 
     @Override
     public void aumentaLuminosita(int value) {
-
+        if (this.brightness > 0){
+            this.brightness--;
+        }
     }
 
     @Override
     public void diminuisciLuminosita(int value) {
+        if(this.brightness < 10){
+            this.brightness++;
+        }
+    }
 
+
+    //purtroppo avendo usato delle interfaces non so come evitare di ripetere il mio codice, spero di aver fatto bene il resto :(
+    @Override
+    public void play() {
+        String puntoEsc = "!";
+        String asterisk = "*";
+        for (int i = 0; i < getLength(); i++) {
+            System.out.println("Il titolo è: " + getTitle() + " volume: " +  puntoEsc.repeat(this.volume) + " luminosità : " + asterisk.repeat(this.brightness));
+        };
     }
 
     @Override
     public void abbassaVolume(int value) {
+        if (this.volume > 0){
+            this.volume--;
+        }
 
     }
 
     @Override
     public void alzaVolume(int value) {
-
+        if(this.volume < 10){
+            this.volume++;
+        }
     }
 }
