@@ -27,8 +27,7 @@ public class Image extends MultimedialElement implements Show, Brightness {
     @Override
     public void show() {
         String asterisk = "*";
-        for (int i = 0; i < getBrightness(); i++) {
-            System.out.println("Il titolo è: " + getTitle() +" luminosità : " + asterisk.repeat(this.brightness));
-        };
+        System.out.println("Il titolo è: " + getTitle() +" luminosità : " + asterisk.repeat(this.brightness));
+
     }
 }
