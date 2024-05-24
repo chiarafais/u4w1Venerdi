@@ -31,7 +31,6 @@ public class Video extends MultimedialElement implements Play, Brightness {
     }
 
 
-    //purtroppo avendo usato delle interfaces non so come evitare di ripetere il mio codice, spero di aver fatto bene il resto :(
     @Override
     public void play() {
         String puntoEsc = "!";

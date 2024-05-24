@@ -18,6 +18,10 @@ public abstract class MultimedialElement {
         return title;
     }
 
+    public int getBrightness() {
+        return brightness;
+    }
+
     //video
     public MultimedialElement(String title, int length, int volume, int brightness, TypeElement typoElement) {
         this.title = title;
